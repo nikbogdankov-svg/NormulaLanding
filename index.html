@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Normula.cz - software pro školní jídelny, školky a školy</title>
+  <title>Normula.cz - Mějte normování a stravování plně pod kontrolou</title>
   <meta name="description" content="Normula automatizuje tvorbu jídelních lístků, import technologických karet, správu financí, spotřební koš, evidenci strávníků a docházku. Pro školky, školy a školní jídelny v ČR." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -216,6 +216,25 @@ a { color: inherit; text-decoration: none; }
 }
 .progress { flex: 1; height: 8px; background: var(--green-100); border-radius: 999px; overflow: hidden; }
 .progress i { display: block; height: 100%; background: linear-gradient(90deg, var(--green-400), var(--green-600)); border-radius: 999px; }
+
+/* App screenshot showcase */
+.showcase { padding: 4px 0 44px; }
+.showcase__frame {
+  margin: 0;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+.showcase__scroll { overflow-x: auto; }
+.showcase__scroll::-webkit-scrollbar { height: 10px; }
+.showcase__scroll::-webkit-scrollbar-track { background: var(--paper); }
+.showcase__scroll::-webkit-scrollbar-thumb { background: #cfdcd6; border: 3px solid var(--paper); border-radius: 999px; }
+
+.showcase__img {
+  display: block; width: 100%; min-width: 900px; height: auto;
+}
 
 /* Sections */
 .section { padding: 84px 0; }
@@ -489,6 +508,22 @@ a { color: inherit; text-decoration: none; }
       </div>
     </section>
 
+    <!-- APP SHOWCASE -->
+    <section class="showcase" aria-label="Náhled aplikace Normula - Jídelníček">
+      <div class="container">
+        <div class="showcase__frame">
+          <div class="mock__bar" aria-hidden="true">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="mock__title">Normula - Jídelníček</span>
+          </div>
+
+          <div class="showcase__scroll">
+            <img class="showcase__img" src="Image.png" width="2940" height="1664" loading="lazy" decoding="async" alt="Náhled obrazovky Jídelníček v aplikaci Normula - plán jídel na týden">
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- FEATURES -->
     <section class="section" id="funkce">
       <div class="container">
@@ -745,7 +780,7 @@ a { color: inherit; text-decoration: none; }
   onScroll();
 
   var revealTargets = document.querySelectorAll(
-    ".card, .step, .stat, .price, .section__head, .benefits__text, .cta__text, .hero__content"
+    ".card, .step, .stat, .price, .section__head, .benefits__text, .cta__text, .hero__content, .showcase__frame"
   );
   revealTargets.forEach(function (el) { el.classList.add("reveal"); });
 
