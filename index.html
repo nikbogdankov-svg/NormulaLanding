@@ -64,15 +64,6 @@ a { color: inherit; text-decoration: none; }
   color: transparent;
 }
 
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: .12em;
-  font-size: .78rem;
-  font-weight: 700;
-  color: var(--green-600);
-  margin: 0 0 .75rem;
-}
-
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -220,15 +211,6 @@ a { color: inherit; text-decoration: none; }
 .progress { flex: 1; height: 8px; background: var(--green-100); border-radius: 999px; overflow: hidden; }
 .progress i { display: block; height: 100%; background: linear-gradient(90deg, var(--green-400), var(--green-600)); border-radius: 999px; }
 
-/* Partners */
-.partners { margin-top: 56px; text-align: center; }
-.partners > span { font-size: .78rem; text-transform: uppercase; letter-spacing: .12em; color: var(--slate-400); font-weight: 700; }
-.partners__row {
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 2.5rem;
-  margin-top: 1rem; color: var(--slate-600); font-weight: 600; font-size: .95rem;
-  opacity: .85;
-}
-
 /* Sections */
 .section { padding: 84px 0; }
 .section--alt { background: var(--paper-alt); }
@@ -245,14 +227,13 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 26px;
-  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
-.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--green-400); }
 .card__icon {
   display: grid; place-items: center;
   width: 48px; height: 48px; border-radius: 12px;
-  background: var(--green-50); font-size: 22px; margin-bottom: 14px;
+  background: var(--green-50); margin-bottom: 14px;
 }
+.card__icon svg { width: 24px; height: 24px; color: var(--green-600); }
 .card h3 { font-size: 1.12rem; }
 .card p { color: var(--slate-600); font-size: .95rem; margin: 0; }
 
@@ -316,6 +297,7 @@ a { color: inherit; text-decoration: none; }
 .price ul li { position: relative; padding-left: 1.6rem; margin-bottom: .6rem; font-size: .92rem; color: var(--slate-600); }
 .price ul li::before { content: "✓"; position: absolute; left: 0; color: var(--green-600); font-weight: 800; }
 .price .btn { margin-top: auto; }
+.pricing-single { max-width: 460px; margin: 0 auto; }
 
 /* FAQ */
 .faq details {
@@ -349,6 +331,7 @@ a { color: inherit; text-decoration: none; }
 .cta__text p { color: #b9d3c8; }
 
 .cta__form { position: relative; z-index: 1; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: var(--radius); padding: 24px; }
+.cta__form .btn { box-shadow: none; border: none; outline: none; }
 .field { margin-bottom: 14px; }
 .field label { display: block; font-size: .82rem; font-weight: 600; margin-bottom: .35rem; color: #cfe6dc; }
 .field input {
@@ -407,7 +390,6 @@ a { color: inherit; text-decoration: none; }
   .benefits__stats { grid-template-columns: 1fr 1fr; }
   .section { padding: 60px 0; }
   .mock { transform: none; }
-  .partners__row { gap: .75rem 1.5rem; font-size: .85rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -433,8 +415,7 @@ a { color: inherit; text-decoration: none; }
       </nav>
 
       <div class="nav__actions">
-        <a class="btn btn--ghost" href="#kontakt">Přihlásit se</a>
-        <a class="btn btn--primary" href="#kontakt">Vyzkoušet zdarma</a>
+        <a class="btn btn--primary" href="#kontakt">Domluvit ukázku</a>
       </div>
 
       <button class="nav__toggle" id="navToggle" aria-label="Otevřít menu" aria-expanded="false">
@@ -449,7 +430,6 @@ a { color: inherit; text-decoration: none; }
       <div class="hero__glow" aria-hidden="true"></div>
       <div class="container hero__inner">
         <div class="hero__content">
-          <p class="eyebrow">Pro školky, školy a školní jídelny v ČR</p>
           <h1>Kompletní agenda stravování <span class="grad">na jednom místě</span></h1>
           <p class="lead">
             Normula automatizuje tvorbu jídelních lístků, import technologických karet (TTH),
@@ -457,7 +437,7 @@ a { color: inherit; text-decoration: none; }
             Ušetřete hodiny administrativy každý týden.
           </p>
           <div class="hero__cta">
-            <a class="btn btn--primary btn--lg" href="#kontakt">Vyzkoušet zdarma na 14 dní</a>
+            <a class="btn btn--primary btn--lg" href="#kontakt">Domluvit ukázku</a>
             <a class="btn btn--outline btn--lg" href="#jak-to-funguje">Jak to funguje</a>
           </div>
           <ul class="hero__trust">
@@ -501,61 +481,49 @@ a { color: inherit; text-decoration: none; }
           </div>
         </div>
       </div>
-
-      <div class="container partners">
-        <span>Důvěřují nám</span>
-        <div class="partners__row">
-          <span>Mateřské školy</span>
-          <span>Základní školy</span>
-          <span>Školní jídelny</span>
-          <span>Domy dětí</span>
-          <span>Internáty</span>
-        </div>
-      </div>
     </section>
 
     <!-- FEATURES -->
     <section class="section" id="funkce">
       <div class="container">
         <div class="section__head">
-          <p class="eyebrow">Funkce</p>
           <h2>Vše, co školní stravování potřebuje</h2>
           <p class="sub">Jeden systém místo tabulek, papírů a několika programů.</p>
         </div>
 
         <div class="grid grid--cards">
           <article class="card">
-            <div class="card__icon">🍽️</div>
+            <div class="card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></div>
             <h3>Automatická tvorba menu</h3>
             <p>Tvořte jídelní lístky na týdny dopředu. Systém hlídá pestrost, kombinace a doporučené dávky potravin.</p>
           </article>
 
           <article class="card">
-            <div class="card__icon">📥</div>
+            <div class="card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
             <h3>Import TTH a receptur</h3>
             <p>Nahrajte technologické karty a receptury jedním kliknutím. Automatický přepočet surovin na počet porcí.</p>
           </article>
 
           <article class="card">
-            <div class="card__icon">💰</div>
+            <div class="card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg></div>
             <h3>Finance a kalkulace</h3>
             <p>Přesné kalkulace nákladů na porci, přehled nákladů na suroviny, mzdy i režii. Vždy víte, kolik vás strava stojí.</p>
           </article>
 
           <article class="card">
-            <div class="card__icon">📋</div>
+            <div class="card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg></div>
             <h3>Výkazy a deníky</h3>
             <p>Spotřební koš, výživové normy, deníky strávníků, přehledy alergenů a další výkazy generované automaticky.</p>
           </article>
 
           <article class="card">
-            <div class="card__icon">🧍</div>
+            <div class="card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg></div>
             <h3>Evidence strávníků a docházka</h3>
             <p>Kdo přišel, kdo onemocněl, kdo odjel na výlet. Odhlášky, přihlášky a docházka v reálném čase.</p>
           </article>
 
           <article class="card">
-            <div class="card__icon">🌾</div>
+            <div class="card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z"/><path d="M11.47 17.47 13 19l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L5 19l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/><path d="M15.47 13.47 17 15l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L9 15l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/><path d="M19.47 9.47 21 11l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L13 11l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/></svg></div>
             <h3>Alergeny a diety</h3>
             <p>Automatické označení 14 alergenů a správa diabetických, bezlepkových a dalších dietních omezení.</p>
           </article>
@@ -567,7 +535,6 @@ a { color: inherit; text-decoration: none; }
     <section class="section section--alt" id="jak-to-funguje">
       <div class="container">
         <div class="section__head">
-          <p class="eyebrow">Jak to funguje</p>
           <h2>Od importu k hotovému výkazu ve třech krocích</h2>
         </div>
 
@@ -595,7 +562,6 @@ a { color: inherit; text-decoration: none; }
     <section class="section">
       <div class="container benefits">
         <div class="benefits__text">
-          <p class="eyebrow">Proč Normula</p>
           <h2>Méně papírování, více času na děti</h2>
           <ul class="checklist">
             <li><strong>Až 10 hodin měsíčně ušetřeno</strong> — konec ručnímu přepočítávání norem a psaní deníků.</li>
@@ -618,52 +584,25 @@ a { color: inherit; text-decoration: none; }
     <section class="section section--alt" id="cenik">
       <div class="container">
         <div class="section__head">
-          <p class="eyebrow">Ceník</p>
           <h2>Transparentní ceny bez skrytých poplatků</h2>
-          <p class="sub">14 dní zdarma, bez platební karty. Zrušíte kdykoliv.</p>
+          <p class="sub">Nezávazná nabídka na míru podle rozsahu funkcí a počtu strávníků.</p>
         </div>
 
-        <div class="grid grid--pricing">
-          <article class="price">
-            <h3>Start</h3>
-            <p class="price__for">Pro menší školky do 100 strávníků</p>
-            <div class="price__amount"><span>790 Kč</span><small>/ měsíc</small></div>
-            <ul>
-              <li>Tvorba jídelních lístků</li>
-              <li>Import TTH a receptur</li>
-              <li>Evidence strávníků a docházka</li>
-              <li>E-mailová podpora</li>
-            </ul>
-            <a class="btn btn--outline btn--block" href="#kontakt">Vyzkoušet zdarma</a>
-          </article>
-
+        <div class="pricing-single">
           <article class="price price--featured">
-            <span class="price__tag">Nejčastější volba</span>
-            <h3>Standard</h3>
-            <p class="price__for">Pro školy a jídelny do 500 strávníků</p>
-            <div class="price__amount"><span>1 590 Kč</span><small>/ měsíc</small></div>
-            <ul>
-              <li>Vše ze tarifu Start</li>
-              <li>Finance a kalkulace nákladů</li>
-              <li>Automatický spotřební koš</li>
-              <li>Alergeny a diety</li>
-              <li>Export výkazů pro ČŠI a hygienu</li>
-            </ul>
-            <a class="btn btn--primary btn--block" href="#kontakt">Vyzkoušet zdarma</a>
-          </article>
-
-          <article class="price">
-            <h3>Provozovatel</h3>
-            <p class="price__for">Pro zřizovatele s více jídelnami</p>
+            <span class="price__tag">Na míru</span>
+            <h3>Individuální nabídka</h3>
+            <p class="price__for">Pro mateřské školy, základní školy a školní jídelny</p>
             <div class="price__amount"><span>Individuálně</span></div>
             <ul>
-              <li>Vše ze tarifu Standard</li>
-              <li>Správa více škol a jídelen</li>
-              <li>Centrální statistiky a reporting</li>
-              <li>Napojení na účetní systém</li>
-              <li>Prioritní podpora a školení</li>
+              <li>Tvorba jídelních lístků a import TTH</li>
+              <li>Finance, kalkulace a spotřební koš</li>
+              <li>Evidence strávníků, docházka a výkazy</li>
+              <li>Alergeny a diety</li>
+              <li>Export výkazů pro ČŠI a hygienu</li>
+              <li>Zavedení, školení a podpora</li>
             </ul>
-            <a class="btn btn--outline btn--block" href="#kontakt">Nezávazně poptat</a>
+            <a class="btn btn--primary btn--block" href="#kontakt">Nezávazně poptat</a>
           </article>
         </div>
       </div>
@@ -673,7 +612,6 @@ a { color: inherit; text-decoration: none; }
     <section class="section" id="faq">
       <div class="container container--narrow">
         <div class="section__head">
-          <p class="eyebrow">Časté dotazy</p>
           <h2>Na co se nás ptáte nejčastěji</h2>
         </div>
 
@@ -691,8 +629,8 @@ a { color: inherit; text-decoration: none; }
             <p>Normula počítá spotřební koš a výživové normy podle vyhlášky č. 107/2005 Sb. a hlídá 14 povinně označovaných alergenů.</p>
           </details>
           <details>
-            <summary>Kolik to stojí a je možné to vyzkoušet?</summary>
-            <p>Prvních 14 dní je zcela zdarma a bez platební karty. Cena poté začíná na 790 Kč měsíčně podle počtu strávníků.</p>
+            <summary>Kolik to stojí a jak získám nabídku?</summary>
+            <p>Cena závisí na rozsahu funkcí a počtu strávníků. Nezávazně vám připravíme individuální nabídku na míru.</p>
           </details>
           <details>
             <summary>Umíte přepočítat množství surovin na počet porcí?</summary>
@@ -706,7 +644,7 @@ a { color: inherit; text-decoration: none; }
     <section class="section cta" id="kontakt">
       <div class="container cta__box">
         <div class="cta__text">
-          <h2>Vyzkoušejte Normula zdarma</h2>
+          <h2>Domluvte si ukázku Normula</h2>
           <p>Zanechte nám kontakt a my vám do 24 hodin zavoláme, ukážeme systém a pomůžeme s nastavením.</p>
         </div>
         <form class="cta__form" id="leadForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
@@ -730,7 +668,7 @@ a { color: inherit; text-decoration: none; }
             <label for="phone">Telefon</label>
             <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+420 123 456 789" />
           </div>
-          <button class="btn btn--primary btn--block btn--lg" type="submit">Chci ukázku zdarma</button>
+          <button class="btn btn--primary btn--block btn--lg" type="submit">Chci ukázku</button>
           <p class="form__note" id="formNote" role="status" aria-live="polite"></p>
           <p class="form__legal">Odesláním souhlasíte se <a href="ochrana-udaju.html">zpracováním osobních údajů</a> za účelem kontaktu. Nic vám neposíláme bez vašeho souhlasu.</p>
         </form>
@@ -757,7 +695,6 @@ a { color: inherit; text-decoration: none; }
         <div>
           <h4>Kontakt</h4>
           <a href="mailto:info@normula.cz">info@normula.cz</a>
-          <a href="tel:+420123456789">+420 123 456 789</a>
           <span>Praha, Česká republika</span>
         </div>
       </div>
