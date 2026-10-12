@@ -1,0 +1,23 @@
+{
+  "name": "Normula.cz",
+  "short_name": "Normula",
+  "description": "Software pro školní stravování - automatizace jídelních lístků, import technologických karet, finance a evidence strávníků.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#008f00",
+  "icons": [
+    {
+      "src": "web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
