@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Normula.cz — software pro školní jídelny, školky a školy</title>
+  <meta name="description" content="Normula automatizuje tvorbu jídelních lístků, import TTH (technologických karet), správu financí, spotřební koš, evidenci strávníků a docházku. Pro školky, školy a školní jídelny v ČR." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="logo" href="#top" aria-label="Normula.cz">
+        <span class="logo__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h9l7 7v9H4z" />
+            <path d="M13 4v7h7" />
+            <path d="M8 15h8" />
+            <path d="M8 18h5" />
+          </svg>
+        </span>
+        <span class="logo__text">Normula<span>.cz</span></span>
+      </a>
+
+      <nav class="nav__links" aria-label="Hlavní navigace">
+        <a href="#funkce">Funkce</a>
+        <a href="#jak-to-funguje">Jak to funguje</a>
+        <a href="#cenik">Ceník</a>
+        <a href="#faq">Časté dotazy</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a class="btn btn--ghost" href="#kontakt">Přihlásit se</a>
+        <a class="btn btn--primary" href="#kontakt">Vyzkoušet zdarma</a>
+      </div>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Otevřít menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow">Pro školky, školy a školní jídelny v ČR</p>
+          <h1>Kompletní agenda stravování <span class="grad">na jednom místě</span></h1>
+          <p class="lead">
+            Normula automatizuje tvorbu jídelních lístků, import technologických karet (TTH),
+            hlídá spotřební koš a výživové normy, vede finance, evidenci strávníků i docházku.
+            Ušetřete hodiny administrativy každý týden.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--primary btn--lg" href="#kontakt">Vyzkoušet zdarma na 14 dní</a>
+            <a class="btn btn--outline btn--lg" href="#jak-to-funguje">Jak to funguje</a>
+          </div>
+          <ul class="hero__trust">
+            <li>✔ Bez instalace — běží v prohlížeči</li>
+            <li>✔ V souladu s vyhláškou č. 107/2005 Sb.</li>
+            <li>✔ Česká podpora</li>
+          </ul>
+        </div>
+
+        <div class="hero__panel" aria-hidden="true">
+          <div class="mock">
+            <div class="mock__bar">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="mock__title">Jídelní lístek — týden 42</span>
+            </div>
+            <div class="mock__body">
+              <div class="mock__row mock__row--head">
+                <span>Den</span><span>Oběd</span><span>Norma</span>
+              </div>
+              <div class="mock__row">
+                <span>Po</span><span>Kuřecí vývar, rizoto</span><span class="badge badge--ok">100 %</span>
+              </div>
+              <div class="mock__row">
+                <span>Út</span><span>Polévka zeleninová, ryba</span><span class="badge badge--ok">98 %</span>
+              </div>
+              <div class="mock__row">
+                <span>St</span><span>Hrachová, sekaná, brambor</span><span class="badge badge--warn">92 %</span>
+              </div>
+              <div class="mock__row">
+                <span>Čt</span><span>Květáková, karbanátek</span><span class="badge badge--ok">101 %</span>
+              </div>
+              <div class="mock__row">
+                <span>Pá</span><span>Gulášová, palačinky</span><span class="badge badge--ok">99 %</span>
+              </div>
+              <div class="mock__foot">
+                <span>Spotřební koš</span>
+                <div class="progress"><i style="width: 96%"></i></div>
+                <span>96 %</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container partners">
+        <span>Důvěřují nám</span>
+        <div class="partners__row">
+          <span>Mateřské školy</span>
+          <span>Základní školy</span>
+          <span>Školní jídelny</span>
+          <span>Domy dětí</span>
+          <span>Internáty</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section" id="funkce">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Funkce</p>
+          <h2>Vše, co školní stravování potřebuje</h2>
+          <p class="sub">Jeden systém místo tabulek, papírů a několika programů.</p>
+        </div>
+
+        <div class="grid grid--cards">
+          <article class="card">
+            <div class="card__icon">🍽️</div>
+            <h3>Automatická tvorba menu</h3>
+            <p>Tvořte jídelní lístky na týdny dopředu. Systém hlídá pestrost, kombinace a doporučené dávky potravin.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">📥</div>
+            <h3>Import TTH a receptur</h3>
+            <p>Nahrajte technologické karty a receptury jedním kliknutím. Automatický přepočet surovin na počet porcí.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">💰</div>
+            <h3>Finance a kalkulace</h3>
+            <p>Přesné kalkulace nákladů na porci, přehled nákladů na suroviny, mzdy i režii. Vždy víte, kolik vás strava stojí.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">📋</div>
+            <h3>Výkazy a deníky</h3>
+            <p>Spotřební koš, výživové normy, deníky strávníků, přehledy alergenů a další výkazy generované automaticky.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">🧍</div>
+            <h3>Evidence strávníků a docházka</h3>
+            <p>Kdo přišel, kdo onemocněl, kdo odjel na výlet. Odhlášky, přihlášky a docházka v reálném čase.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">🌾</div>
+            <h3>Alergeny a diety</h3>
+            <p>Automatické označení 14 alergenů a správa diabetických, bezlepkových a dalších dietních omezení.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section section--alt" id="jak-to-funguje">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Jak to funguje</p>
+          <h2>Od importu k hotovému výkazu ve třech krocích</h2>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num">1</span>
+            <h3>Nahrajte data</h3>
+            <p>Import TTH, receptur, strávníků a skladu z Excelu nebo z vašeho stávajícího systému.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">2</span>
+            <h3>Naplánujte menu</h3>
+            <p>Sestavte jídelní lístek pomocí šablon. Normula sama přepočítá suroviny a zkontroluje normy.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">3</span>
+            <h3>Vykazujte</h3>
+            <p>Spotřební koš, finance i evidence docházky se generují automaticky — připravené ke kontrole a exportu.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="section">
+      <div class="container benefits">
+        <div class="benefits__text">
+          <p class="eyebrow">Proč Normula</p>
+          <h2>Méně papírování, více času na děti</h2>
+          <ul class="checklist">
+            <li><strong>Až 10 hodin měsíčně ušetřeno</strong> — konec ručnímu přepočítávání norem a psaní deníků.</li>
+            <li><strong>Vždy v souladu s legislativou</strong> — spotřební koš a výživové normy dle vyhlášky č. 107/2005 Sb.</li>
+            <li><strong>Přehled o financích</strong> — náklady na porci i celý provoz na jednom dashboardu.</li>
+            <li><strong>Rychlá kontrola</strong> — okamžitý export výkazů pro ČŠI, hygienu a zřizovatele.</li>
+          </ul>
+          <a class="btn btn--primary" href="#kontakt">Chci ukázku</a>
+        </div>
+        <div class="benefits__stats">
+          <div class="stat"><span class="stat__num">10 h</span><span class="stat__label">měsíčně ušetřeno na administrativě</span></div>
+          <div class="stat"><span class="stat__num">100 %</span><span class="stat__label">automatický spotřební koš</span></div>
+          <div class="stat"><span class="stat__num">14</span><span class="stat__label">hlídaných alergenů</span></div>
+          <div class="stat"><span class="stat__num">24/7</span><span class="stat__label">přístup z jakéhokoliv zařízení</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section section--alt" id="cenik">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Ceník</p>
+          <h2>Transparentní ceny bez skrytých poplatků</h2>
+          <p class="sub">14 dní zdarma, bez platební karty. Zrušíte kdykoliv.</p>
+        </div>
+
+        <div class="grid grid--pricing">
+          <article class="price">
+            <h3>Start</h3>
+            <p class="price__for">Pro menší školky do 100 strávníků</p>
+            <div class="price__amount"><span>790 Kč</span><small>/ měsíc</small></div>
+            <ul>
+              <li>Tvorba jídelních lístků</li>
+              <li>Import TTH a receptur</li>
+              <li>Evidence strávníků a docházka</li>
+              <li>E-mailová podpora</li>
+            </ul>
+            <a class="btn btn--outline btn--block" href="#kontakt">Vyzkoušet zdarma</a>
+          </article>
+
+          <article class="price price--featured">
+            <span class="price__tag">Nejčastější volba</span>
+            <h3>Standard</h3>
+            <p class="price__for">Pro školy a jídelny do 500 strávníků</p>
+            <div class="price__amount"><span>1 590 Kč</span><small>/ měsíc</small></div>
+            <ul>
+              <li>Vše ze tarifu Start</li>
+              <li>Finance a kalkulace nákladů</li>
+              <li>Automatický spotřební koš</li>
+              <li>Alergeny a diety</li>
+              <li>Export výkazů pro ČŠI a hygienu</li>
+            </ul>
+            <a class="btn btn--primary btn--block" href="#kontakt">Vyzkoušet zdarma</a>
+          </article>
+
+          <article class="price">
+            <h3>Provozovatel</h3>
+            <p class="price__for">Pro zřizovatele s více jídelnami</p>
+            <div class="price__amount"><span>Individuálně</span></div>
+            <ul>
+              <li>Vše ze tarifu Standard</li>
+              <li>Správa více škol a jídelen</li>
+              <li>Centrální statistiky a reporting</li>
+              <li>Napojení na účetní systém</li>
+              <li>Prioritní podpora a školení</li>
+            </ul>
+            <a class="btn btn--outline btn--block" href="#kontakt">Nezávazně poptat</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head">
+          <p class="eyebrow">Časté dotazy</p>
+          <h2>Na co se nás ptáte nejčastěji</h2>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Musíme něco instalovat?</summary>
+            <p>Ne. Normula běží v prohlížeči na počítači, tabletu i telefonu. Stačí se přihlásit a máte přístup odkudkoliv.</p>
+          </details>
+          <details>
+            <summary>Zvládneme přejít ze stávajícího systému?</summary>
+            <p>Ano. Pomůžeme vám s importem TTH, receptur, strávníků i historie. Máme připravené šablony a naši podporu.</p>
+          </details>
+          <details>
+            <summary>Odpovídá systém české legislativě?</summary>
+            <p>Normula počítá spotřební koš a výživové normy podle vyhlášky č. 107/2005 Sb. a hlídá 14 povinně označovaných alergenů.</p>
+          </details>
+          <details>
+            <summary>Kolik to stojí a je možné to vyzkoušet?</summary>
+            <p>Prvních 14 dní je zcela zdarma a bez platební karty. Cena poté začíná na 790 Kč měsíčně podle počtu strávníků.</p>
+          </details>
+          <details>
+            <summary>Umíte přepočítat množství surovin na počet porcí?</summary>
+            <p>Ano. Z technologických karet Normula automaticky přepočítá suroviny na aktuální počet strávníků a vygeneruje objednávku na sklad.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / CONTACT -->
+    <section class="section cta" id="kontakt">
+      <div class="container cta__box">
+        <div class="cta__text">
+          <h2>Vyzkoušejte Normula zdarma</h2>
+          <p>Zanechte nám kontakt a my vám do 24 hodin zavoláme, ukážeme systém a pomůžeme s nastavením.</p>
+        </div>
+        <form class="cta__form" id="leadForm" novalidate>
+          <div class="field">
+            <label for="name">Jméno a příjmení</label>
+            <input id="name" name="name" type="text" autocomplete="name" required placeholder="Jana Nováková" />
+          </div>
+          <div class="field">
+            <label for="org">Název školy / jídelny</label>
+            <input id="org" name="org" type="text" autocomplete="organization" required placeholder="MŠ U Lesa" />
+          </div>
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required placeholder="jana@skolka.cz" />
+          </div>
+          <div class="field">
+            <label for="phone">Telefon</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+420 123 456 789" />
+          </div>
+          <button class="btn btn--primary btn--block btn--lg" type="submit">Chci ukázku zdarma</button>
+          <p class="form__note" id="formNote" role="status" aria-live="polite"></p>
+          <p class="form__legal">Odesláním souhlasíte se zpracováním údajů za účelem kontaktu. Nic vám neposíláme bez vašeho souhlasu.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="logo" href="#top">
+          <span class="logo__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h9l7 7v9H4z" />
+              <path d="M13 4v7h7" />
+              <path d="M8 15h8" />
+              <path d="M8 18h5" />
+            </svg>
+          </span>
+          <span class="logo__text">Normula<span>.cz</span></span>
+        </a>
+        <p>Software pro školní stravování. Vyrobeno v České republice.</p>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <h4>Produkt</h4>
+          <a href="#funkce">Funkce</a>
+          <a href="#cenik">Ceník</a>
+          <a href="#faq">Časté dotazy</a>
+        </div>
+        <div>
+          <h4>Kontakt</h4>
+          <a href="mailto:info@normula.cz">info@normula.cz</a>
+          <a href="tel:+420123456789">+420 123 456 789</a>
+          <span>Praha, Česká republika</span>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> Normula.cz — Všechna práva vyhrazena.</span>
+      <span>Ochrana údajů · Podmínky užívání</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
