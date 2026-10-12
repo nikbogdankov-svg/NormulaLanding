@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ochrana osobních údajů (GDPR) — Normula.cz</title>
+  <meta name="description" content="Zásady zpracování a ochrany osobních údajů (GDPR) služby Normula.cz pro školky, školy a školní jídelny." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --green-100: #d6ecd6; --green-400: #33a633; --green-500: #008f00;
+      --green-600: #008f00; --green-700: #006b00; --ink-900: #0b1a15;
+      --ink-800: #12271f; --slate-600: #52665e; --slate-400: #8aa196;
+      --paper-alt: #f5faf7; --border: #e3ede8; --maxw: 820px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--ink-800); background: #fff; line-height: 1.7; -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--green-700); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+    .nav { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.86); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; height: 64px; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    .logo { display: inline-flex; align-items: center; gap: .55rem; font-weight: 800; font-size: 1.1rem; letter-spacing: -0.03em; color: var(--ink-900); }
+    .logo__img { display: block; width: 34px; height: 34px; object-fit: contain; }
+    .logo__text span { color: var(--green-600); }
+    .btn { display: inline-flex; align-items: center; gap: .4rem; border-radius: 999px; padding: .55rem 1rem; font-weight: 600; font-size: .9rem; background: var(--green-600); color: #fff; }
+    .btn:hover { background: var(--green-700); text-decoration: none; }
+
+    .hero-doc { background: var(--paper-alt); border-bottom: 1px solid var(--border); padding: 44px 0 36px; }
+    .hero-doc h1 { font-size: clamp(1.7rem, 3.4vw, 2.4rem); margin: 0 0 .35rem; letter-spacing: -0.02em; color: var(--ink-900); }
+    .hero-doc p { margin: 0; color: var(--slate-600); }
+    .meta { font-size: .85rem; color: var(--slate-400); margin-top: .6rem; }
+
+    main.doc { padding: 44px 0 20px; }
+    .doc h2 { font-size: 1.25rem; margin: 2.2em 0 .6em; color: var(--ink-900); letter-spacing: -0.01em; }
+    .doc h2:first-child { margin-top: 0; }
+    .doc h3 { font-size: 1.02rem; margin: 1.6em 0 .4em; color: var(--ink-900); }
+    .doc p { color: var(--slate-600); margin: 0 0 1em; }
+    .doc ul, .doc ol { color: var(--slate-600); padding-left: 1.3rem; margin: 0 0 1.2em; }
+    .doc li { margin-bottom: .45em; }
+    .doc strong { color: var(--ink-900); }
+    .doc a { font-weight: 600; }
+    .callout {
+      background: var(--paper-alt); border: 1px solid var(--border); border-left: 4px solid var(--green-500);
+      border-radius: 12px; padding: 16px 20px; margin: 0 0 1.6em; color: var(--slate-600); font-size: .93rem;
+    }
+    .ph { background: #fef3c7; border-radius: 4px; padding: 0 .3em; font-weight: 600; color: #92400e; }
+
+    .footer { background: var(--ink-900); color: #c6d8d0; padding: 40px 0 28px; margin-top: 60px; }
+    .footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem; max-width: var(--maxw); margin: 0 auto; padding: 0 24px 22px; border-bottom: 1px solid rgba(255,255,255,.08); }
+    .footer .logo { color: #fff; }
+    .footer__links { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .footer__links a, .footer__bottom a { color: #a8c4b9; font-size: .9rem; }
+    .footer__links a:hover, .footer__bottom a:hover { color: var(--green-400); }
+    .footer__bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; max-width: var(--maxw); margin: 0 auto; padding: 18px 24px 0; font-size: .82rem; color: #7d9b90; }
+    .footer__bottom a { text-decoration: underline; text-underline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="logo" href="index.html">
+        <img class="logo__img" src="icon.png" width="32" height="32" alt="" />
+        <span class="logo__text">Normula<span>.cz</span></span>
+      </a>
+      <a class="btn" href="index.html">Zpět na web</a>
+    </div>
+  </header>
+
+  <section class="hero-doc">
+    <div class="container">
+      <h1>Ochrana osobních údajů (GDPR)</h1>
+      <p>Zásady zpracování osobních údajů ve smyslu nařízení Evropského parlamentu a Rady (EU) 2016/679 (GDPR).</p>
+      <p class="meta">Účinné od: <span class="ph">[datum]</span> &nbsp;·&nbsp; Verze 1.0</p>
+    </div>
+  </section>
+
+  <main class="doc">
+    <div class="container">
+      <div class="callout">
+        Tento dokument je šablona připravená pro službu Normula.cz. Před zveřejněním doplňte údaje označené
+        žlutě (název společnosti, IČO, sídlo, kontakt) a nechte text zkontrolovat právníkem.
+      </div>
+
+      <h2>1. Správce osobních údajů</h2>
+      <p>
+        Správcem osobních údajů je společnost <span class="ph">[název společnosti]</span>,
+        se sídlem <span class="ph">[sídlo]</span>, IČO: <span class="ph">[IČO]</span>,
+        zapsaná v obchodním rejstříku vedeném <span class="ph">[soud]</span> (dále jen „<strong>správce</strong>“ nebo „<strong>my</strong>“).
+      </p>
+      <p>
+        Kontakt pro otázky ochrany osobních údajů: <a href="mailto:gdpr@normula.cz">gdpr@normula.cz</a>,
+        telefon <span class="ph">[telefon]</span>.
+      </p>
+
+      <h2>2. Jaké osobní údaje zpracováváme</h2>
+      <p>V závislosti na využívaných funkcích služby zpracováváme zejména tyto kategorie údajů:</p>
+      <ul>
+        <li><strong>Identifikační a kontaktní údaje</strong> – jméno a příjmení, název organizace (školky, školy, jídelny), e-mail, telefon, adresa.</li>
+        <li><strong>Údaje o strávnících</strong> – jméno, příjmení, datum narození, třída/skupina a evidence stravy, včetně dietních omezení a alergenů (jde o údaje o zdravotním stavu ve smyslu čl. 9 GDPR).</li>
+        <li><strong>Provozní a fakturační údaje</strong> – údaje o objednávkách, platbách, historii stravování a docházce.</li>
+        <li><strong>Technické údaje</strong> – IP adresa, typ zařízení a prohlížeče, logy přihlášení, cookies.</li>
+      </ul>
+
+      <h2>3. Účel a právní základ zpracování</h2>
+      <ul>
+        <li><strong>Poskytování služby a plnění smlouvy</strong> – čl. 6 odst. 1 písm. b) GDPR.</li>
+        <li><strong>Plnění právních povinností</strong> (účetnictví, archivace, školní stravování) – čl. 6 odst. 1 písm. c) GDPR.</li>
+        <li><strong>Oprávněný zájem</strong> (zabezpečení, prevence podvodů, zlepšování služby) – čl. 6 odst. 1 písm. f) GDPR.</li>
+        <li><strong>Souhlas</strong> (newsletter, marketing, zpracování údajů o zdravotním stavu, pokud není dán jiný základ) – čl. 6 odst. 1 písm. a) GDPR, resp. čl. 9 odst. 2 písm. a) GDPR. Souhlas lze kdykoli odvolat.</li>
+      </ul>
+
+      <h2>4. Doba uchovávání údajů</h2>
+      <p>
+        Osobní údaje uchováváme pouze po dobu nezbytně nutnou k naplnění účelu zpracování, a to v souladu
+        s právními předpisy. Účetní a daňové doklady uchováváme zpravidla po dobu 5 let od konce účetního období.
+        Údaje o stravování a docházce uchováváme po dobu stanovenou právními předpisy pro školní stravování.
+        Po uplynutí této doby jsou údaje vymazány nebo anonymizovány.
+      </p>
+
+      <h2>5. Příjemci a zpracovatelé údajů</h2>
+      <p>Osobní údaje můžeme předávat těmto kategoriím příjemců:</p>
+      <ul>
+        <li>poskytovatelé cloudové infrastruktury a hostingu,</li>
+        <li>poskytovatelé účetních a fakturačních systémů,</li>
+        <li>poskytovatelé e-mailové komunikace a zákaznické podpory,</li>
+        <li>orgány veřejné moci, vyžaduje-li to zákon.</li>
+      </ul>
+      <p>Se všemi zpracovateli máme uzavřeny smlouvy o zpracování osobních údajů dle čl. 28 GDPR.</p>
+
+      <h2>6. Předávání údajů mimo EU/EHP</h2>
+      <p>
+        Údaje primárně zpracováváme v rámci Evropské unie. Pokud by docházelo k předání mimo EU/EHP,
+        proběhne pouze na základě rozhodnutí o odpovídající ochraně nebo vhodných záruk (standardní smluvní
+        doložky dle čl. 46 GDPR).
+      </p>
+
+      <h2>7. Vaše práva</h2>
+      <p>Jako subjekt údajů máte právo:</p>
+      <ul>
+        <li>na přístup k osobním údajům a na informace o jejich zpracování,</li>
+        <li>na opravu nepřesných nebo neúplných údajů,</li>
+        <li>na výmaz údajů („právo být zapomenut“), nebrání-li tomu právní povinnost,</li>
+        <li>na omezení zpracování,</li>
+        <li>na přenositelnost údajů,</li>
+        <li>vznést námitku proti zpracování založenému na oprávněném zájmu,</li>
+        <li>kdykoli odvolat udělený souhlas, aniž je dotčena zákonnost předchozího zpracování.</li>
+      </ul>
+      <p>
+        Svá práva můžete uplatnit na <a href="mailto:gdpr@normula.cz">gdpr@normula.cz</a>.
+        Máte také právo podat stížnost u <strong>Úřadu pro ochranu osobních údajů</strong>
+        (Pplk. Sochora 27, 170 00 Praha 7, <a href="https://www.uoou.cz" target="_blank" rel="noopener">www.uoou.cz</a>).
+      </p>
+
+      <h2>8. Cookies a analytika</h2>
+      <p>
+        Web používá technické a analytické cookies pro zajištění správné funkce a zlepšování služby.
+        Analytické a marketingové cookies nastavujeme pouze na základě vašeho souhlasu, který můžete
+        kdykoli změnit v nastavení prohlížeče.
+      </p>
+
+      <h2>9. Zabezpečení</h2>
+      <p>
+        Přijali jsme technická a organizační opatření k ochraně osobních údajů, zejména šifrování přenosu
+        (HTTPS), řízení přístupu, pravidelné zálohování a zásadu minimalizace údajů. Přístup k údajům mají
+        pouze oprávněné osoby vázané povinností mlčenlivosti.
+      </p>
+
+      <h2>10. Změny těchto zásad</h2>
+      <p>
+        Tyto zásady můžeme průběžně aktualizovat. Aktuální verzi vždy zveřejňujeme na této stránce
+        s uvedením data účinnosti. Doporučujeme stránku sledovat.
+      </p>
+
+      <h2>11. Kontakt</h2>
+      <p>
+        V případě dotazů ohledně ochrany osobních údajů nás kontaktujte na
+        <a href="mailto:gdpr@normula.cz">gdpr@normula.cz</a>.
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="logo" href="index.html">
+        <img class="logo__img" src="icon.png" width="32" height="32" alt="" />
+        <span class="logo__text">Normula<span>.cz</span></span>
+      </a>
+      <nav class="footer__links" aria-label="Právní odkazy">
+        <a href="index.html">Domů</a>
+        <a href="ochrana-udaju.html">Ochrana údajů (GDPR)</a>
+        <a href="podminky-uzivani.html">Podmínky užívání</a>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> Normula.cz — Všechna práva vyhrazena.</span>
+      <span><a href="ochrana-udaju.html">Ochrana údajů (GDPR)</a> · <a href="podminky-uzivani.html">Podmínky užívání</a></span>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
